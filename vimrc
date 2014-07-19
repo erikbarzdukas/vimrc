@@ -4,38 +4,38 @@ filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
-" Let Vundle manage Vundle
-" Required
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-fugitive'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'Valloric/YouCompleteMe'
 
-" My bundles here:
-"
-" Original repos on GitHub
-"
-" NERDTree
-Bundle 'scrooloose/nerdtree'
-
-"Vim Fugitive
-Bundle 'tpope/vim-fugitive'
-
-" Solarized theme + setup code
-Bundle 'altercation/vim-colors-solarized'
+"Solarized setup code
+set t_Co=16
 syntax enable
 set background=dark
 colorscheme solarized
 
-"Syntastic
-Bundle 'scrooloose/syntastic'
-
 
 filetype plugin indent on
 
-"#############################
+"#####################
 " Keymaps for profit
-"############################
+"#####################
 
-" Use ctrl-[hjkl] to select active split!
+" Use ctr-[hjkl] to select active split!
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+"################
+" Tab settings 
+"################
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
